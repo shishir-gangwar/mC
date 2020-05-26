@@ -51,11 +51,17 @@ For an order with list of products and delivery location calculate and print shi
 ## Sample catalogue
 
 (product,length,breadth,height,Procurement location)
+
 [p2,    250,    200,    200,      (20,5)]
+
 [p1,    10,     5,      5,       (12, 5)]
+
 [p3,    20,     10,     10,     (100, 5)]
+
 [p5,    25,     10,     22,     (100, 5)]
+
 [p4,    50,     75,     80,     (15, 78)]
+
 [p1,    10,     5,      5,      (22, 50)]
 
 
