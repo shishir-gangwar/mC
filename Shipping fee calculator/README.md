@@ -29,13 +29,13 @@ Packaging fees = (length * breadth * height ) / 100) rupees.
 
 ### Logistics Rate Card
 
-Distance (units),  Rate (Rs/unit distance)
+    Distance (units),  Rate (Rs/unit distance)
 
-0-5,                   0
-                
-6-10  ,                6
+    0-5,                   0
 
-11-*   ,               12
+    6-10  ,                6
+
+    11-*   ,               12
 
 
 Distance should be calculated with the euclidean distance formula.
@@ -50,22 +50,23 @@ For an order with list of products and delivery location calculate and print shi
 
 ## Sample catalogue
 
-(product,length,breadth,height,Procurement location)
+    (product,length,breadth,height,Procurement location)
 
-[p2,    250,    200,    200,      (20,5)]
+    [p2,    250,    200,    200,      (20,5)]
 
-[p1,    10,     5,      5,       (12, 5)]
+    [p1,    10,     5,      5,       (12, 5)]
 
-[p3,    20,     10,     10,     (100, 5)]
+    [p3,    20,     10,     10,     (100, 5)]
 
-[p5,    25,     10,     22,     (100, 5)]
+    [p5,    25,     10,     22,     (100, 5)]
 
-[p4,    50,     75,     80,     (15, 78)]
+    [p4,    50,     75,     80,     (15, 78)]
 
-[p1,    10,     5,      5,      (22, 50)]
+    [p1,    10,     5,      5,      (22, 50)]
 
 
 Bonus question:
-Consider packaging fees with handling attributes like fragile/flammable products.
 
-Consider basketing option with nearby procurement locations.
+    Consider packaging fees with handling attributes like fragile/flammable products.
+
+    Consider basketing option with nearby procurement locations.
