@@ -1,3 +1,5 @@
+const _ = require('lodash')
+
 class User{
 	constructor(user,email,country){
 		this.user = user
@@ -11,23 +13,28 @@ class User{
 }
 let usersList = []
 
-document.getElementById('submitUser').addEventListener('click', () => {
-	let user = document.getElementById('user').value
-	let email = document.getElementById('email').value
-	let country = document.getElementById('country').value
-	let newUser = new User(user,email,country)
-	usersList.push(newUser)
-	console.log(usersList)
-})
+document.getElementById('submitUser')
+.addEventListener('click', 
+	_.debounce(() => 
+	{
+		let user = document.getElementById('user').value
+		let email = document.getElementById('email').value
+		let country = document.getElementById('country').value
+		let newUser = new User(user,email,country)
+		usersList.push(newUser)
+		console.log(usersList)
+	},1000))
 
-document.getElementById('modify').addEventListener('click', () => {
-	let user = document.getElementById('changeScore').value
-	let newScore = parseInt(document.getElementById('newScore').value)
-	console.log(user+newScore)
-	let res = usersList.filter(element => element.user == user)
-	if(res.length>0)
-	res[0].updateScore(newScore)
-})
+document.getElementById('modify')
+.addEventListener('click', 
+	_.throttle(() => {
+		let user = document.getElementById('changeScore').value
+		let newScore = parseInt(document.getElementById('newScore').value)
+		console.log(user+newScore)
+		let res = usersList.filter(element => element.user == user)
+		if(res.length>0)
+		res[0].updateScore(newScore)
+	},2000))
 
 document.getElementById('getTopK').addEventListener('click', () => {
 	let k = parseInt(document.getElementById('k').value)
