@@ -1,4 +1,4 @@
-# Problem Statement
+## Problem Statement
 Given a binary tree as a sequence of (parent, child) tuples: (A B)(A C)(B G)(C H)(E F)(B D)(C E) Write a program to find following errors in the tree:
 E1: More than 2 children
 E2: Duplicate Tuples
@@ -9,7 +9,7 @@ Input is a expression containing parent child relations. output is Error codes o
 
 
 
-# Sample test cases
+## Sample test cases
 Input: (A B)(A C)(B G)(C H)(E F)(B D)(C E) Output: Success
 Input: (A B)(A C)(A D) Output: E1
 Input: (A B)(A B) Output: E2
