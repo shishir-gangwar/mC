@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game leaderboard</title>
+	<h1> LeaderBoard </h1>
+</head>
+<body>
+	<form onsubmit="Event.preventDefault();">
+		<h2>Add user</h2>
+		<input type="text" placeholder="user" id="user">
+		<input type="text" placeholder="email" id="email">
+		<input type="text" placeholder="country" id="country">
+		<input type="button" value="submit" id="submitUser">
+	</form>
+	<form onsubmit="Event.preventDefault();">
+		<h2>Modify score</h2>
+		<input type="text" placeholder="user" id="changeScore">
+		<input type="text" placeholder="score" id="newScore">
+		<input type="button" value="change Score" id="modify">
+	</form>
+	<form onsubmit="Event.preventDefault();">
+		<h2>Top k</h2>
+		<input type="text" placeholder="k" id="k">
+		<input type="button" value="getTop" id="getTopK">
+	</form>
+	<form onsubmit="Event.preventDefault();">
+		<h2>Get user with specific score</h2>
+		<input type="text" placeholder="score" id="score">
+		<input type="button" value="get Users" id="getUserList">
+	</form>
+	<form onsubmit="Event.preventDefault();">
+		<h2>Search User</h2>
+		<input type="text" placeholder="user" id="user2">
+		<input type="text" placeholder="email" id="email2">
+		<input type="text" placeholder="country" id="country2">
+		<input type="button" value="submit" id="searchUser">
+	</form>
+	<form onsubmit="Event.preventDefault();">
+		<h2>substring filter</h2>
+		<input type="text" placeholder="substr" id="substr">
+		<input type="button" value="get Users" id="getUsersSub">
+	</form>
+	<form onsubmit="Event.preventDefault();">
+		<h2>Rank-Range Filter</h2>
+		<input type="text" placeholder="begin" id="begin">
+		<input type="text" placeholder="end" id="end">
+		<input type="button" value="getUsers" id="rankRange">
+	</form>
+	<script type="text/javascript" src = "index.js"></script>
+
+</body>
+</html>
