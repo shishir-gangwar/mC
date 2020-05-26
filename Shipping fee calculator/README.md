@@ -29,13 +29,13 @@ Packaging fees = (length * breadth * height ) / 100) rupees.
 
 ### Logistics Rate Card
 
-Distance (units)  Rate (Rs/unit distance)
+Distance (units),  Rate (Rs/unit distance)
 
-0-5                   0
+0-5,                   0
                 
-6-10                  6
+6-10  ,                6
 
-11-*                  12
+11-*   ,               12
 
 
 Distance should be calculated with the euclidean distance formula.
