@@ -7,12 +7,8 @@ class User{
 		this.country = country
 		this.score = 0
 	}
-	updateScore(score) {
-		this.score = score
-	}
 }
-let usersList = []
-
+let usersList = JSON.parse(sessionStorage.getItem('usersList')) || []
 document.getElementById('submitUser')
 .addEventListener('click', 
 	_.debounce(() => 
@@ -22,6 +18,7 @@ document.getElementById('submitUser')
 		let country = document.getElementById('country').value
 		let newUser = new User(user,email,country)
 		usersList.push(newUser)
+		sessionStorage.setItem('usersList',JSON.stringify(usersList))
 		console.log(usersList)
 	},1000))
 
@@ -33,7 +30,8 @@ document.getElementById('modify')
 		console.log(user+newScore)
 		let res = usersList.filter(element => element.user == user)
 		if(res.length>0)
-		res[0].updateScore(newScore)
+		res[0].score = newScore
+		sessionStorage.setItem('usersList',JSON.stringify(usersList))
 	},2000))
 
 document.getElementById('getTopK').addEventListener('click', () => {
@@ -79,3 +77,5 @@ document.getElementById('rankRange').addEventListener('click', () => {
 	})
 	console.log(rangeList.slice(begin-1,end))
 })
+
+console.log(usersList)
