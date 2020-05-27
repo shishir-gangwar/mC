@@ -83,3 +83,6 @@ Expected Output
 [Bonus]Users with between ranks 1 and 2 are nikhil@flipkart.com, rahul@flipkart.com
 
 [Bonus]Users with name matching Nik are nikhil@flipkart.com
+
+
+[browserify index.js > bundle.js]
